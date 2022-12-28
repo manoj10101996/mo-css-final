@@ -1,0 +1,33 @@
+$themes: (
+  "danger": #eb144c,
+  "warning": #fcb900,
+  "success": #00d084,
+  "info": #0693e3,
+  "primary": #9900ef,
+  "light": #abb8c3,
+  "dark": #000,
+  "core": #0d6efd,
+);
+
+$themes-text: (
+  "danger": #fff,
+  "warning": #fff,
+  "success": #fff,
+  "info": #fff,
+  "primary": #fff,
+  "light": #000,
+  "dark": #fff,
+  "core": #fff,
+);
+
+@each $name, $color in $themes {
+  @for $i from 0 through 100 {
+    .mo-#{$name}-#{$i} {
+      background-color: rgba($color: $color, $alpha: $i / 100) !important;
+    }
+
+    .mo-text-#{$name}-#{$i} {
+      color: rgba($color: $color, $alpha: $i / 100) !important;
+    }
+  }
+}

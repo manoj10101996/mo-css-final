@@ -1,0 +1,28 @@
+.mo-btn-group {
+  .mo-btn {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    z-index: 1;
+  }
+
+  .mo-btn:focus {
+    animation: none !important;
+  }
+
+  .mo-btn:hover,
+  .mo:active {
+    animation: none !important;
+    z-index: 1001 !important;
+    box-shadow: 0px 2.5px 0px rgba($color: #000000, $alpha: 0.15);
+  }
+
+  .mo-btn:first-child {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+  }
+
+  .mo-btn:last-child {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+}

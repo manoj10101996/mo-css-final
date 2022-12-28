@@ -1,0 +1,59 @@
+<div class="mo-card">
+  <div class="mo-card-header">
+    Sign In Form
+  </div>
+  <div class="mo-card-body">
+    <div class="mo-input-box mb-16">
+      <label for="username">Enter username</label>
+      <input type="text" placeholder="Email or Username" class="mo-input" />
+    </div>
+    <div class="mo-input-box mb-16">
+      <label for="username">Enter Password</label>
+      <input type="password" placeholder="Password" class="mo-input" />
+    </div>
+    <span class="mo-badge mo-badge-invite-danger-left mo-badge-rounded mb-16">
+      Forgot password?.
+    </span>
+  </div>
+  <div class="mo-card-footer">
+    <button class="mo-btn mo-btn-bg-danger">Reset</button>
+    <button class="mo-btn mo-btn-bg-success">Sign In</button>
+  </div>
+</div>
+
+<div class="mo-card">
+  <div class="mo-card-header">
+    Sign Up Form
+  </div>
+  <div class="mo-card-body">
+    <div class="mo-input-box mb-16">
+      <label for="username">Enter username</label>
+      <input type="text" placeholder="Email or Username" class="mo-input" />
+    </div>
+    <div class="mo-input-box mb-16">
+      <label for="username">Enter Password</label>
+      <input type="password" placeholder="Password" class="mo-input" />
+    </div>
+    <div class="mo-input-box mb-16">
+      <label for="username">Confirm Password</label>
+      <input type="password" placeholder="Password" class="mo-input" />
+    </div>
+    <label for="username">Choose Gender</label>
+    <div class="mo-radio mo-radio-checked-success mt-16">
+      <input type="radio" name="colors" [attr.id]="'mo-radio-male'" checked />
+      <label [attr.for]="'mo-radio-male'">
+        Male
+      </label>
+    </div>
+    <div class="mo-radio mo-radio-checked-success pb-10">
+      <input type="radio" name="colors" [attr.id]="'mo-radio-female'" checked />
+      <label [attr.for]="'mo-radio-female'">
+        Female
+      </label>
+    </div>
+  </div>
+  <div class="mo-card-footer">
+    <button class="mo-btn mo-btn-bg-danger">Reset</button>
+    <button class="mo-btn mo-btn-bg-success">Sign Up</button>
+  </div>
+</div>

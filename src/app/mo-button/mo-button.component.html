@@ -1,0 +1,250 @@
+<div id="btn">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Button
+  </div>
+  <div class="mo-text-2 pb-10">
+    Always specify the type attribute for a &lt;button&gt; element, to tell
+    browsers what type of button it is.
+  </div>
+  <div class="mo-text-2 pb-10">
+    The &lt;button&gt; HTML element is an interactive element activated by a
+    user with a mouse, keyboard, finger, voice command, or other assistive
+    technology. Once activated,
+  </div>
+  <div class="mo-text-2 pb-10">
+    it then performs a programmable action, such as submitting a form or opening
+    a dialog.
+  </div>
+  <div class="mo-text-2 pb-10">
+    To create a button, just add the
+    <span class="mo-text-i mo-text-b">.mo-btn</span> class to an inline element
+    like &lt;button&gt; or &lt;a&gt; element.
+  </div>
+</div>
+
+<!--  -->
+<div id="btn-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button:</span>Simple Button element used to
+      interact with user with theme color.
+    </div>
+    <div class="mo-card-header">
+      <div>
+        <button class="mo-btn mo-btn-bg-{{color}} mo-btn-small">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['button']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-outline">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button - Outline:</span>Button element used
+      to interact with user with outline color.
+    </div>
+    <div class="mo-card-header">
+      <div>
+        <button class="mo-btn mo-btn-outline-bg-{{color}}">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['btn-outline']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-invite">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button - Invite:</span>Button element used to
+      interact with user with cutom border.
+    </div>
+    <div class="mo-card-body">
+      <div>
+        <button class="mo-btn mo-btn-invite-{{color}}-{{position}}">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Position
+      </span>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="top"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-top-' + color"
+        />
+        <label [attr.for]="'mo-radio-top-' + color">
+          Top
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="right"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-right-' + color"
+        />
+        <label [attr.for]="'mo-radio-right-' + color">
+          Right
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="bottom"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-bottom-' + color"
+        />
+        <label [attr.for]="'mo-radio-bottom-' + color">
+          Bottom
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="left"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-left-' + color"
+        />
+        <label [attr.for]="'mo-radio-left-' + color">
+          Left
+        </label>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['btn-invite']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-fill">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button - Fill:</span>Button element used to
+      interact with user with partial filled background.
+    </div>
+    <div class="mo-card-header">
+      <div>
+        <button class="mo-btn mo-btn-fill-{{color}} mo-btn-squared">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['btn-filled']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-size">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button - size:</span>Button element used to
+      interact with user with various sizes.
+    </div>
+    <div class="mo-card-header">
+      <div>
+        <button class="mo-btn mo-btn-bg-{{color}}">
+          {{color}}
+        </button>
+      </div>
+      <div class="mt-12">
+        <button class="mo-btn mo-btn-bg-{{color}} mo-btn-large">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['btn-default']"></code></pre>
+      <pre><code [highlight]="codes['btn-large']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-edge">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button - edge:</span>Button element used to
+      interact with user with various button edges.
+    </div>
+    <div class="mo-card-header">
+      <div>
+        <button class="mo-btn mo-btn-bg-{{color}} mo-btn-squared">
+          {{color}}
+        </button>
+      </div>
+      <div class="mt-12">
+        <button class="mo-btn mo-btn-bg-{{color}} mo-btn-rounded">
+          {{color}}
+        </button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['btn-squared']"></code></pre>
+      <pre><code [highlight]="codes['btn-rounded']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

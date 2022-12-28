@@ -1,0 +1,191 @@
+<div id="input">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Input
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Input box to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    The &lt;input&gt; HTML element is used to create interactive controls for
+    web-based forms in order to accept data from the user; a wide variety of
+    types of input data and control widgets are available, depending on the
+    device and user agent. The &lt;input&gt; element is one of the most powerful
+    and complex in all of HTML due to the sheer number of combinations of input
+    types and attributes.
+  </div>
+</div>
+
+<!--  -->
+<div id="input-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input Basic</label>
+        <input
+          type="text"
+          id="input-basic"
+          placeholder="Enter text basic"
+          class="mo-input"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="input-small" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Small Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input small</label>
+        <input
+          type="text"
+          placeholder="Enter text {{color}}"
+          class="mo-input mo-input-small mo-input-bg-{{color}}"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['small']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="input-medium" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Medium (Default) Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input Medium (Default) </label>
+        <input
+          type="text"
+          placeholder="Enter text {{color}}"
+          class="mo-input mo-input-bg-{{color}}"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['medium']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="input-large" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Medium (Default) Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input Large</label>
+        <input
+          type="text"
+          placeholder="Enter text {{color}}"
+          class="mo-input mo-input-large mo-input-bg-{{color}}"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['large']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="input-squared" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Squared Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input Square</label>
+        <input
+          type="text"
+          placeholder="Enter text {{color}}"
+          class="mo-input mo-input-squared mo-input-bg-{{color}}"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['squared']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="input-rounded" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Rounded Input box with text label.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-input-box">
+        <label for="input-basic">Input Rounded</label>
+        <input
+          type="text"
+          placeholder="Enter text {{color}}"
+          class="mo-input mo-input-rounded mo-input-bg-{{color}}"
+        />
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['rounded']"></code></pre>
+    </div>
+  </div>
+</div>
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

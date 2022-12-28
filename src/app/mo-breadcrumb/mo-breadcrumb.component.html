@@ -1,0 +1,206 @@
+<div id="breadcrumb">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Breadcrumb
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking notification badges.
+  </div>
+  <div class="mo-text-2 pb-10">
+    The Breadcrumb component consists of links, which are aligned side by side
+    and separated by a divider. Add the .mo-breadcrumb class to a &lt;ul&gt;
+    element to define the component. Use &lt;a&gt; elements as breadcrumb items
+    within the list. An active state is automatically applied to the last
+    &lt;ul&gt; element.
+  </div>
+</div>
+
+<!--  -->
+<div id="breadcrumb-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Indicate the current page’s location within a navigational hierarchy that
+      automatically adds separators via CSS.
+    </div>
+    <div class="mo-card-header">
+      <nav>
+        <ol class="mo-breadcrumb">
+          <li class="mo-breadcrumb-item"><a href="#">Home</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Library</a></li>
+          <li class="mo-breadcrumb-item mo-breadcrumb-active">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+    <div class="mo-card-footer">
+      For Active link&nbsp;-&nbsp;
+      <span class="mo-badge mo-badge-invite-{{color}}-left mo-badge-rounded">
+        mo-breadcrumb-active
+      </span>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="breadcrumb-fill">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Breadcrumb - Filled:</span>With filled
+      background theme.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-d-flex" style="align-items: center;">
+        <nav>
+          <ol
+            class="mo-breadcrumb mo-breadcrumb-border-rounded mo-breadcrumb-bg-{{color}}"
+          >
+            <li class="mo-breadcrumb-item"><a href="#">Home</a></li>
+            <li class="mo-breadcrumb-item"><a href="#">Library</a></li>
+            <li class="mo-breadcrumb-item mo-breadcrumb-active">Data</li>
+          </ol>
+        </nav>
+        <div class="theme-selection-grid">
+          <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+            <div
+              class="theme"
+              [style.background]="themes[theme].color"
+              [class.theme-active]="color === theme"
+              (click)="color = theme;this.setTheme();"
+            ></div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="breadcrumb-dash">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Breadcrumb - Dash:</span>With custom (-) Dash
+      seperator
+    </div>
+    <div class="mo-card-header">
+      <nav>
+        <ol class="mo-breadcrumb mo-breadcrumb-dash">
+          <li class="mo-breadcrumb-item"><a href="#">Home</a></li>
+          <li class="mo-breadcrumb-item mo-breadcrumb-active">
+            <a href="#">Library</a>
+          </li>
+          <li class="mo-breadcrumb-item">Data</li>
+          <li class="mo-breadcrumb-item">Contacts</li>
+          <li class="mo-breadcrumb-item">Mention</li>
+          <li class="mo-breadcrumb-item">Category</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['dash']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="breadcrumb-tilde">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Breadcrumb - Tilde:</span>With custom (~)
+      Tilde seperator
+    </div>
+    <div class="mo-card-header">
+      <nav>
+        <ol class="mo-breadcrumb mo-breadcrumb-tilde">
+          <li class="mo-breadcrumb-item"><a href="#">Visit</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Back</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Library</a></li>
+          <li class="mo-breadcrumb-item mo-breadcrumb-active">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['tilde']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="breadcrumb-border-squared">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Breadcrumb - Border Squared:</span>With
+      Squared outline border.
+    </div>
+    <div class="mo-card-header">
+      <nav>
+        <ol class="mo-breadcrumb mo-breadcrumb-bordered">
+          <li class="mo-breadcrumb-item"><a href="#">Home</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Library</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Books</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Read</a></li>
+          <li class="mo-breadcrumb-item mo-breadcrumb-active">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['border']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="mo-breadcrumb-border-rounded">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Breadcrumb - Border rounded</span> With
+      rounded outline border.
+    </div>
+    <div class="mo-card-header">
+      <nav>
+        <ol class="mo-breadcrumb mo-breadcrumb-border-rounded">
+          <li class="mo-breadcrumb-item"><a href="#">Home</a></li>
+          <li class="mo-breadcrumb-item"><a href="#">Library</a></li>
+          <li class="mo-breadcrumb-item mo-breadcrumb-active">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['rounded']"></code></pre>
+    </div>
+  </div>
+</div>

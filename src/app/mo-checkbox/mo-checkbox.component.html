@@ -1,0 +1,60 @@
+<div id="radio">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Checkbox
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Checkbox to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    &lt;input&gt; elements of type checkbox are rendered by default as boxes
+    that are checked (ticked) when activated, like you might see in an official
+    government paper form. The exact appearance depends upon the operating
+    system configuration under which the browser is running. Generally this is a
+    square but it may have rounded corners. A checkbox allows you to select
+    single values for submission in a form (or not).
+  </div>
+</div>
+<div id="radio-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic checkbox with color theme.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-checkbox mo-checkbox-checked-{{color}}">
+        <input
+          type="checkbox"
+          [attr.id]="'mo-checkbox-view-' + color"
+          checked
+        />
+        <label [attr.for]="'mo-checkbox-view-' + color">
+          Checkbox - {{color | titlecase}}
+        </label>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="code"></code></pre>
+    </div>
+    <div class="mo-card-footer">
+      Name - Attribute in &lt;input&gt; should be same for all inputs.
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

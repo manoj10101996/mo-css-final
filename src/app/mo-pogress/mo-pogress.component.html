@@ -1,0 +1,200 @@
+<div id="progress">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Progress bar
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Dropdowns to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    Dropdowns are toggleable, contextual overlays for displaying lists of links
+    and more. They’re made interactive. They’re toggled by hovering; this is an
+    intentional design decision.
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div class="mo-progress" style="width: 15%;"></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-theme" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Theme based.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div class="mo-progress mo-{{color}}" style="width: 15%;"></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-rtol" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Diagonal line left to right.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div
+          class="mo-progress mo-{{color}} mo-progress-{{color}}-diagonal"
+          style="width: 35%;"
+        ></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['diagonal']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-ltor" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Diagonal line right to left.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div
+          class="mo-progress mo-{{color}} mo-progress-{{color}}-diagonal-v2"
+          style="width: 45%;"
+        ></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['diagonal-v2']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-vlines" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Vertical lines.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div
+          class="mo-progress mo-{{color}} mo-progress-{{color}}-diagonal-v3"
+          style="width: 65%;"
+        ></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['diagonal-v3']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="progress-hlines" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Horizantal Horizantal.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div
+          class="mo-progress mo-{{color}} mo-progress-{{color}}-diagonal-v4"
+          style="width: 65%;"
+        ></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['diagonal-v4']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="progress-lines" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Progress bar - Slight lines.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-progress-bar">
+        <div
+          class="mo-progress mo-{{color}} mo-progress-{{color}}-diagonal-v5"
+          style="width: 75%;"
+        ></div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['diagonal-v5']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

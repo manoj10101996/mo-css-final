@@ -1,0 +1,118 @@
+<div id="dropdown">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Dropdown
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Dropdowns to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    Dropdowns are toggleable, contextual overlays for displaying lists of links
+    and more. They’re made interactive. They’re toggled by hovering; this is an
+    intentional design decision.
+  </div>
+</div>
+
+<!--  -->
+<div id="dropdown-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Dropdown layout with unordered Items.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-dropdown mo-dropdown-toggle mb-16">
+        <button class="mo-btn" type="button">
+          mo-dropdown button
+        </button>
+        <ul class="mo-dropdown-list mo-list">
+          <li>List Mo - 1</li>
+          <li>List Mo - 2</li>
+          <li>List Mo - 3</li>
+          <li>List Mo - 4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="dropdown-theme" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Dropdown layout with unordered Items of colored theme.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-dropdown mo-dropdown-toggle mb-16">
+        <button class="mo-btn mo-btn-bg-{{color}}" type="button">
+          mo-dropdown button
+        </button>
+        <ul class="mo-dropdown-list mo-list mo-list-bg-{{color}}">
+          <li>List Mo - 1</li>
+          <li>List Mo - 2</li>
+          <li>List Mo - 3</li>
+          <li>List Mo - 4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div id="dropdown-left" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Dropdown layout with unordered Items with left alignment.
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-dropdown mo-dropdown-left mo-dropdown-toggle">
+        <button class="mo-btn mo-btn-bg-{{color}}" type="button">
+          mo-dropdown button
+        </button>
+        <ul class="mo-dropdown-list mo-list mo-list-bg-{{color}}">
+          <li>mo-dropdown</li>
+          <li>mo-dropdown</li>
+          <li>mo-dropdown</li>
+          <li>mo-dropdown</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['left']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

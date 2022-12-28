@@ -1,0 +1,172 @@
+<div id="breadcrumb">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Button group
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking grouped buttons.
+  </div>
+  <div class="mo-text-2 pb-10">
+    Group a series of buttons together on a single line or stack them in a
+    vertical column.
+  </div>
+</div>
+
+<!--  -->
+<div id="btn-group-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Indicate the current page’s location within a navigational hierarchy that
+      automatically adds separators via CSS.
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn">Left</button>
+        <button type="button" class="mo-btn">Middle</button>
+        <button type="button" class="mo-btn">Right</button>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn">1</button>
+        <button type="button" class="mo-btn">2</button>
+        <button type="button" class="mo-btn">3</button>
+        <button type="button" class="mo-btn">4</button>
+        <button type="button" class="mo-btn">5</button>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn">1</button>
+        <button type="button" class="mo-btn">2</button>
+        <button type="button" class="mo-btn">...</button>
+        <button type="button" class="mo-btn">99</button>
+        <button type="button" class="mo-btn">100</button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-group-small" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button group - small:</span>Series of small
+      buttons grouped together.
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn mo-btn-small">Left</button>
+        <button type="button" class="mo-btn mo-btn-small">Middle</button>
+        <button type="button" class="mo-btn mo-btn-small">Right</button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['small']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-group-large" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button group - Large:</span>Series of large
+      buttons grouped together.
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn mo-btn-large">Left</button>
+        <button type="button" class="mo-btn mo-btn-large">Middle</button>
+        <button type="button" class="mo-btn mo-btn-large">Right</button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['large']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-group-mixed" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button group - Mixed:</span>Series of large
+      buttons grouped together as mixed theme colors.
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-btn-group">
+        <button type="button" class="mo-btn mo-btn-bg-danger">Left</button>
+        <button type="button" class="mo-btn">Middle</button>
+        <button type="button" class="mo-btn mo-btn-bg-info">Right</button>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['mixed']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="btn-group-theme" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Button group - Theme:</span>Series of large
+      buttons grouped together as theme based.
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-d-flex" style="align-items: center;">
+        <div class="mo-btn-group">
+          <button type="button" class="mo-btn mo-btn-bg-{{color}}">Left</button>
+          <button type="button" class="mo-btn mo-btn-bg-{{color}}">
+            Middle
+          </button>
+          <button type="button" class="mo-btn mo-btn-bg-{{color}}">
+            Right
+          </button>
+        </div>
+        <div class="theme-selection-grid">
+          <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+            <div
+              class="theme"
+              [style.background]="themes[theme].color"
+              [class.theme-active]="color === theme"
+              (click)="color = theme;setTheme();"
+            ></div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>

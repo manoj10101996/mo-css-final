@@ -1,0 +1,261 @@
+<div id="badge">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Badge
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking notification badges.
+  </div>
+  <div class="mo-text-2 pb-10">
+    Documentation and examples for badges, our small count and labeling
+    component.
+  </div>
+  <div class="mo-text-2 pb-10">
+    To create a badge, just add the
+    <span class="mo-text-i mo-text-b">.mo-badge</span> class to an inline
+    element like &lt;a&gt; or &lt;span&gt; element.
+  </div>
+</div>
+<!--  -->
+<div id="badge-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Simple badge element used to interact with user in the way showing count
+      or warning.
+    </div>
+    <div class="mo-card-header">
+      <span class="mo-badge mb-0 mo-border mo-border-light">Badge</span>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mb-0 mo-border mo-border-light">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-invite-block">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Invite:</span>A invite badge element
+      to interact with user with highlighted border with theme color. choose
+      random position in order to create invite alert.
+    </div>
+    <div class="mo-card-header">
+      <span
+        class="mo-badge mo-badge-invite-{{color}}-{{position}} mo-badge-squared"
+        >Badge</span
+      >
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Position
+      </span>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="top"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-top-' + color"
+        />
+        <label [attr.for]="'mo-radio-top-' + color">
+          Top
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="right"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-right-' + color"
+        />
+        <label [attr.for]="'mo-radio-right-' + color">
+          Right
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="bottom"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-bottom-' + color"
+        />
+        <label [attr.for]="'mo-radio-bottom-' + color">
+          Bottom
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="left"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-left-' + color"
+        />
+        <label [attr.for]="'mo-radio-left-' + color">
+          Left
+        </label>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge-invite-{{color}}-{{position}} mo-badge-squared">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-filled-theme">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Filled Theme:</span>A badge element
+      with custom light shade background with dark color text.
+    </div>
+    <div class="mo-card-header">
+      <span class="mo-badge mo-badge-fill-{{color}}">Badge</span>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge-fill-{{color}}">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-outline">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Outline:</span>A badge element with
+      custom light shade background with dark color text & extra outline.
+    </div>
+    <div class="mo-card-header">
+      <span class="mo-badge mo-badge-outline-bg-{{color}}">Badge</span>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge-outline-bg-{{color}}">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-fill">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Fill:</span>A badge element with
+      theme background with appropriate color text.
+    </div>
+    <div class="mo-card-header">
+      <span class="mo-badge mo-badge mo-badge-bg-{{color}}">Badge</span>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge mo-badge-bg-{{color}}">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-after-text">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Square - with after text:</span>A
+      badge element with after text as data-text="value" attribute with
+      appropriate color text.
+    </div>
+    <div class="mo-card-header">
+      <span
+        class="mo-badge mo-badge-bg-{{color}} mo-badge-squared"
+        data-text=" ~"
+        >Badge</span
+      >
+      <span
+        class="mo-badge mo-badge-bg-{{color}} mo-badge-squared"
+        data-text=" +"
+        >Badge</span
+      >
+      <span
+        class="mo-badge mo-badge-bg-{{color}} mo-badge-squared"
+        data-text=" $"
+        >Badge</span
+      >
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge-bg-{{color}} mo-badge-squared" data-text=" ~">Badge</span>'></code></pre>
+      <pre><code highlight='<span class="mo-badge mo-badge-bg-{{color}} mo-badge-squared" data-text=" +">Badge</span>'></code></pre>
+      <pre><code highlight='<span class="mo-badge mo-badge-bg-{{color}} mo-badge-squared" data-text=" $">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="badge-rounded">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Badge - Rounded:</span>A badge element with
+      rounded edges.
+    </div>
+    <div class="mo-card-header">
+      <span class="mo-badge mo-badge-invite-{{color}}-left mo-badge-rounded"
+        >Badge</span
+      >
+      <span class="mo-badge mo-badge-fill-{{color}} mo-badge-rounded"
+        >Badge</span
+      >
+      <span class="mo-badge mo-badge-outline-bg-{{color}} mo-badge-rounded"
+        >Badge</span
+      >
+      <span class="mo-badge mo-badge-bg-{{color}} mo-badge-rounded">Badge</span>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<span class="mo-badge mo-badge-invite-{{color}}-left mo-badge-rounded">Badge</span>'></code></pre>
+      <pre><code highlight='<span class="mo-badge mo-badge-fill-{{color}} mo-badge-rounded">Badge</span>'></code></pre>
+      <pre><code highlight='<span class="mo-badge mo-badge-outline-bg-{{color}} mo-badge-rounded">Badge</span>'></code></pre>
+      <pre><code highlight='<span class="mo-badge mo-badge-bg-{{color}} mo-badge-rounded">Badge</span>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

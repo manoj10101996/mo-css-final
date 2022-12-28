@@ -1,0 +1,264 @@
+@use "sass:map";
+$themes: (
+  "danger": #eb144c,
+  "warning": #fcb900,
+  "success": #00d084,
+  "info": #0693e3,
+  "primary": #9900ef,
+  "light": #abb8c3,
+  "dark": #000,
+  "core": #0d6efd,
+);
+
+$themes-text: (
+  "danger": #fff,
+  "warning": #fff,
+  "success": #fff,
+  "info": #fff,
+  "primary": #fff,
+  "light": #000,
+  "dark": #fff,
+  "core": #fff,
+);
+
+$positions: ("top", "bottom", "left", "right");
+
+@each $name, $color in $themes {
+  .mo-#{$name} {
+    background-color: $color !important;
+    color: map.get($themes-text, #{$name});
+  }
+
+  .mo-alert-bg-#{$name} {
+    background-color: $color !important;
+    color: map.get($themes-text, #{$name});
+  }
+
+  .mo-breadcrumb-bg-#{$name} {
+    background-color: $color !important;
+    border-color: $color !important;
+    .mo-breadcrumb-item {
+      color: map.get($themes-text, #{$name}) !important;
+    }
+    .mo-breadcrumb-item::after {
+      content: " /";
+      padding-left: 0.25rem;
+      color: map.get($themes-text, #{$name}) !important;
+    }
+  }
+
+  .mo-alert-fill-#{$name} {
+    background-color: rgba($color: $color, $alpha: 0.05) !important;
+    color: $color;
+    border: none !important;
+    border: 1px solid rgba($color: $color, $alpha: 0.75) !important;
+  }
+
+  .mo-alert-outline-bg-#{$name} {
+    border: 2px solid $color !important;
+    color: $color;
+  }
+
+  @each $positon in $positions {
+    .mo-alert-invite-#{$name}-#{$positon} {
+      border: 1px solid $color !important;
+      border-#{$positon}: 5px solid $color !important;
+    }
+  }
+
+  .mo-list-bg-#{$name} {
+    border: none !important;
+    li {
+      background-color: $color !important;
+      color: map.get($themes-text, #{$name});
+      border: none !important;
+    }
+  }
+
+  @each $positon in $positions {
+    .mo-list-invite-#{$name}-#{$positon} {
+      border: 1px solid $color !important;
+      border-#{$positon}: 5px solid $color !important;
+      background-color: white;
+    }
+  }
+
+  .mo-badge-bg-#{$name} {
+    background-color: $color !important;
+    color: map.get($themes-text, #{$name});
+  }
+
+  .mo-badge-outline-bg-#{$name} {
+    border: 2px solid $color !important;
+    color: $color;
+  }
+
+  .mo-range-#{$name}::-webkit-slider-thumb {
+    background: rgba($color: $color, $alpha: 0.75) !important;
+  }
+
+  .mo-badge-fill-#{$name} {
+    background-color: rgba($color: $color, $alpha: 0.05) !important;
+    color: $color;
+    border: none !important;
+    border: 1px solid rgba($color: $color, $alpha: 0.75) !important;
+  }
+
+  @each $positon in $positions {
+    .mo-badge-invite-#{$name}-#{$positon} {
+      border: 1px solid $color !important;
+      border-#{$positon}: 5px solid $color !important;
+    }
+  }
+
+  .mo-list-hover-#{$name} {
+    border: 1px solid $color;
+    li:hover {
+      background-color: rgba($color: $color, $alpha: 0.05);
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+
+      color: $color;
+      &:last-of-type {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .mo-border-#{$name} {
+    border-color: $color !important;
+  }
+
+  .mo-text-#{$name} {
+    color: $color !important;
+  }
+
+  .mo-card-bg-#{$name} {
+    background-color: $color !important;
+    color: map.get($themes-text, #{$name});
+  }
+
+  @each $positon in $positions {
+    .mo-card-invite-#{$name}-#{$positon} {
+      border-#{$positon}: 5px solid $color !important;
+    }
+  }
+
+  .mo-card-header-#{$name} {
+    .mo-card-header {
+      background-color: $color !important;
+      color: map.get($themes-text, #{$name});
+    }
+  }
+
+  .mo-btn-bg-#{$name} {
+    background-color: $color !important;
+    color: map.get($themes-text, #{$name});
+  }
+
+  .mo-btn-fill-#{$name} {
+    background-color: rgba($color: $color, $alpha: 0.05) !important;
+    color: $color;
+    border: none !important;
+    border: 1px solid rgba($color: $color, $alpha: 0.75) !important;
+  }
+
+  .mo-btn-outline-bg-#{$name} {
+    border: 2px solid $color !important;
+    color: $color;
+    background-color: white;
+  }
+
+  @each $positon in $positions {
+    .mo-btn-invite-#{$name}-#{$positon} {
+      border: 1px solid $color !important;
+      border-#{$positon}: 5px solid $color !important;
+      background-color: white;
+    }
+  }
+
+  .mo-input-bg-#{$name} {
+    border-color: $color !important;
+    color: $color;
+  }
+
+  .mo-textarea-bg-#{$name} {
+    border-color: $color !important;
+    color: $color;
+  }
+
+  .mo-border-#{$name} {
+    border-color: $color !important;
+  }
+
+  .mo-textarea-scroll-#{$name}::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-left: 1px solid rgba($color: $color, $alpha: 0.125);
+  }
+
+  .mo-textarea-scroll-#{$name}::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background-color: rgba($color: $color, $alpha: 0.25);
+  }
+
+  .mo-textarea-scroll-#{$name}::-webkit-scrollbar:horizontal {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-left: 1px solid rgba($color: $color, $alpha: 0.125);
+  }
+}
+
+@each $name, $color in $themes {
+  .mo-checkbox-checked-#{$name} {
+    input[type="checkbox"]:checked::after {
+      content: "✓";
+      display: block;
+      height: 100%;
+      border-radius: 2px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color !important;
+      color: map.get($themes-text, #{$name});
+    }
+
+    input[type="checkbox"]::after {
+      content: "";
+    }
+  }
+
+  .mo-radio-checked-#{$name} {
+    input[type="radio"]:checked::after {
+      content: "";
+      display: block;
+      height: 100%;
+      border-radius: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: inset 1px solid $color !important;
+      color: map.get($themes-text, #{$name});
+    }
+
+    input[type="radio"]::after {
+      content: "";
+    }
+
+    input[type="radio"]:checked {
+      background-color: $color !important;
+    }
+  }
+}
+ 
+pre {
+  width: 100% !important;
+  display: flex !important;
+  code.hljs {
+    width: 100% !important;
+  }
+}

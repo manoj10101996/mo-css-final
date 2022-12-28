@@ -1,0 +1,63 @@
+.mo-breadcrumb {
+  list-style-type: none;
+  display: flex;
+  padding: 1rem;
+  margin: 0;
+  width: fit-content;
+  .mo-breadcrumb-item {
+    padding-right: 0.5rem;
+    color: rgba($color: #000000, $alpha: 0.75);
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .mo-breadcrumb-item:last-child::after {
+    content: "";
+    padding-left: 0rem;
+  }
+
+  .mo-breadcrumb-item:hover {
+    color: rgba($color: #000000, $alpha: 1);
+    cursor: pointer;
+  }
+
+  .mo-breadcrumb-item::after {
+    content: " /";
+    padding-left: 0.25rem;
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  .mo-breadcrumb-active {
+    color: rgba($color: #000000, $alpha: 1);
+    font-weight: 500;
+  }
+}
+
+.mo-breadcrumb-dash {
+  .mo-breadcrumb-item::after {
+    content: " -";
+    padding-left: 0.25rem;
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.mo-breadcrumb-tilde {
+  .mo-breadcrumb-item::after {
+    content: " ~";
+    padding-left: 0.25rem;
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.mo-breadcrumb-bordered {
+  border: 1px solid rgba($color: #000000, $alpha: 0.25);
+  width: fit-content;
+}
+
+.mo-breadcrumb-border-rounded {
+  border: 1px solid rgba($color: #000000, $alpha: 0.25);
+  width: fit-content;
+  border-radius: 5px;
+}

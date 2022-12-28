@@ -1,0 +1,57 @@
+@use "sass:map";
+
+@mixin line-clamp() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+@for $i from 0 through 10 {
+  .mo-lines-#{$i} {
+    @include line-clamp();
+    -webkit-line-clamp: #{$i};
+    overflow: hidden;
+  }
+}
+
+.mo-text {
+  font-size: 1rem;
+}
+
+@for $i from 1 through 10 {
+  .mo-text-#{$i} {
+    font-size: calc(0.5rem * $i) !important;
+  }
+}
+
+.mo-text-i {
+  font-style: italic !important;
+}
+
+.mo-text-b {
+  font-weight: bold !important;
+}
+
+.mo-text-bolder {
+  font-weight: bolder !important;
+}
+
+.mo-text-o {
+  font-style: oblique;
+}
+
+.mo-text-upper {
+  text-transform: uppercase;
+}
+
+.mo-text-lower {
+  text-transform: lowercase;
+}
+
+.mo-text-capital {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

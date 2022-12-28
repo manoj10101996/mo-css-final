@@ -1,0 +1,75 @@
+<div id="colors">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Colors
+  </div>
+  <div class="mo-text-2 pb-10">
+    Mo-css is supported by an extensive color system that themes our styles and
+    components. This enables more comprehensive customization and extension for
+    any project.
+  </div>
+</div>
+<div id="colors-theme" class="mo-card">
+  <div class="mo-card-header">
+    Basic theme colors
+  </div>
+  <div class="mo-card-body">
+    <div class="mo-text-2">
+      We use a subset of all colors to create a smaller color palette for
+      generating color schemes.
+    </div>
+  </div>
+  <div class="mo-card-body">
+    <ng-template ngFor let-color [ngForOf]="themeArray" let-i="index">
+      <div
+        class="p-16 mo-{{color.name}}-100 me-16"
+        [style.color]="color?.text"
+        *ngIf="color"
+      >
+        {{color?.name | titlecase}}
+      </div>
+    </ng-template>
+  </div>
+  <div class="mo-card-footer">
+    100% opacity.
+  </div>
+</div>
+<!--  -->
+<div id="colors-background" class="mo-card">
+  <div class="mo-card-header">
+    Core colors - background
+  </div>
+  <div class="mo-card-body mo-d-flex">
+    <ng-template ngFor let-color [ngForOf]="colors" let-i="index">
+      <ul class="mo-list">
+        <ng-template ngFor let-i [ngForOf]="indexRange">
+          <li class="p-16 mo-{{color}}{{((i + 1) * 10) - 100}}">
+            <span [style.color]="themes[color].text"></span>
+          </li>
+        </ng-template>
+      </ul>
+    </ng-template>
+  </div>
+  <div class="mo-card-footer">
+    Levels of opacity.
+  </div>
+</div>
+<!--  -->
+<div id="colors-text" class="mo-card">
+  <div class="mo-card-header">
+    Core colors - Text
+  </div>
+  <div class="mo-card-body mo-d-flex">
+    <ng-template ngFor let-color [ngForOf]="colors" let-i="index">
+      <ul class="mo-list">
+        <ng-template ngFor let-i [ngForOf]="indexRange">
+          <li class="p-2 mo-text-{{color}}{{((i + 1) * 10) - 100}}">
+            ABC
+          </li>
+        </ng-template>
+      </ul>
+    </ng-template>
+  </div>
+  <div class="mo-card-footer">
+    Levels of opacity.
+  </div>
+</div>

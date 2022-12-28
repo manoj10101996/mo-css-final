@@ -1,0 +1,28 @@
+.mo-card {
+  padding: 0;
+  border: 1px solid #e4e9f2;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem !important;
+  .mo-card-header {
+    font-weight: 500;
+  }
+
+  .mo-card-header,
+  .mo-card-body,
+  .mo-card-footer {
+    padding: 1rem; 
+    width: initial;
+    overflow:auto;
+    overflow: overlay;
+  }
+
+  .mo-card-header,
+  .mo-card-body {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1); 
+  }
+}
+
+.mo-card-squared {
+  border-radius: 0 !important;
+}

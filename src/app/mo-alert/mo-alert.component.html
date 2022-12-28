@@ -1,0 +1,223 @@
+<div id="alert">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Alerts
+  </div>
+  <div class="mo-text-2 pb-10">
+    Provide contextual feedback messages for typical user actions with the
+    handful of available and flexible alert messages.
+  </div>
+  <div class="mo-text-2 pb-10">
+    Alerts are available for any length of text, as well as an optional dismiss
+    button. For proper styling, use one of the required contextual classes
+    <br />
+    (e.g., .mo-alert .mo-alert-{{color}}).
+  </div>
+  <div class="mo-text-2 pb-10">
+    The notification is a simple colored block meant to draw the attention to
+    the user about something.
+  </div>
+  <div class="mo-text-2 pb-10">
+    To create a alert, just add the
+    <span class="mo-text-i mo-text-b">.mo-alert</span> class to an inline
+    element like &lt;div&gt; or &lt;p&gt; element.
+  </div>
+</div>
+<!--  -->
+<div id="alert-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Simple alert message used to interact with user.
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-alert mb-0 mo-border mo-border-light{{isRounded ? ' '+isRounded : ''}}{{' '+isSquared}}"
+      >
+        This is alert message
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<div class="mo-alert mo-border mo-border-light{{isRounded ? " "+isRounded : ""}}{{isSquared ? " "+isSquared : ""}}">This is alert message</div>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="alert-fill">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Fill:</span>Simple alert message used to
+      interact with user with color filled background.
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-alert mb-0 mo-alert-bg-{{color}}{{isRounded ? ' '+isRounded : ''}}{{' '+isSquared}}"
+      >
+        This is alert message
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<div class="mo-alert mo-alert-bg-{{color}}{{isRounded ? " "+isRounded : ""}}{{isSquared ? " "+isSquared : ""}}">This is alert message</div>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="alert-invite">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Invite Mode:</span>A invite alert message to
+      interact with user with highlighted border with theme color. choose random
+      position in order to create invite alert.
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-alert mb-0 mo-alert-invite-{{color}}-{{position || 'left'}}{{isRounded ? ' '+isRounded : ''}}{{' '+isSquared}}"
+      >
+        This is alert message with invite position {{position}}
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Position
+      </span>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="top"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-top-' + color"
+        />
+        <label [attr.for]="'mo-radio-top-' + color">
+          Top
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="right"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-right-' + color"
+        />
+        <label [attr.for]="'mo-radio-right-' + color">
+          Right
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="bottom"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-bottom-' + color"
+        />
+        <label [attr.for]="'mo-radio-bottom-' + color">
+          Bottom
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="left"
+          [(ngModel)]="position"
+          [attr.id]="'mo-radio-left-' + color"
+        />
+        <label [attr.for]="'mo-radio-left-' + color">
+          Left
+        </label>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<div class="mo-alert mo-alert-invite-{{color}}-{{position || "left"}}{{isRounded ? " "+isRounded : ""}}{{isSquared ? " "+isSquared : ""}}">This is alert message</div>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="alert-theme-filled">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Alert - Filled Theme:</span>A alert message
+      with custom light shade background with dark color text.
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-alert mb-0 mo-alert-fill-{{color}}{{isRounded ? ' '+isRounded : ''}}{{' '+isSquared}}"
+      >
+        This is alert message
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<div class="mo-alert mo-alert-fill-{{color}}{{isRounded ? " "+isRounded : ""}}{{isSquared ? " "+isSquared : ""}}">This is alert message</div>'></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="alert-outline">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      <span class="mo-text-b me-5">Alert - Outline:</span>A invite alert message
+      with outline border as theme color.
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-alert mb-0 mo-alert-outline-bg-{{color}}{{isRounded ? ' '+isRounded : ''}}{{' '+isSquared}}"
+      >
+        This is alert message
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code highlight='<div class="mo-alert mo-alert-outline-bg-{{color}}{{isRounded ? " "+isRounded : ""}}{{isSquared ? " "+isSquared : ""}}">This is alert message</div>'></code></pre>
+    </div>
+  </div>
+</div>
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+  -
+  <div
+    class="theme is-square me-10"
+    [class.theme-active]="isSquared === 'mo-alert-squared'"
+    (click)="isSquared = isSquared === '' ? 'mo-alert-squared' : '';isRounded = '';"
+  ></div>
+  <div
+    class="theme is-round"
+    [class.theme-active]="isRounded === 'mo-alert-rounded'"
+    (click)="isRounded = isRounded === '' ? 'mo-alert-rounded' : '';isSquared = '';"
+  ></div>
+</div>

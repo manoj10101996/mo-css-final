@@ -1,0 +1,95 @@
+@mixin create-border($width, $style, $color) {
+  border: #{$width}px $style $color;
+}
+
+@mixin create-border-left($width, $style, $color) {
+  border-left: #{$width}px $style $color;
+}
+
+@mixin create-border-right($width, $style, $color) {
+  border-right: #{$width}px $style $color;
+}
+
+@mixin create-border-top($width, $style, $color) {
+  border-top: #{$width}px $style $color;
+}
+
+@mixin create-border-bottom($width, $style, $color) {
+  border-bottom: #{$width}px $style $color;
+}
+
+$positions: ("top", "bottom", "left", "right");
+
+$positions2: ("left", "right");
+
+.mo-border {
+  @include create-border(1, solid, rgba(#000, 0.5));
+}
+
+.mo-border-light {
+  @include create-border(1, solid, rgba(#000, 0.25));
+}
+
+.mo-border-slight {
+  @include create-border(1, solid, rgba(#000, 0.125));
+}
+
+.mo-border-top {
+  border-top: 1px solid rgba(#000, 0.5);
+}
+
+.mo-border-bottom {
+  border-bottom: 1px solid rgba(#000, 0.5);
+}
+
+.mo-border-left {
+  border-left: 1px solid rgba(#000, 0.5);
+}
+
+.mo-border-right {
+  border-right: 1px solid rgba(#000, 0.5);
+}
+
+@for $i from 0 through 48 {
+  .mo-border-#{$i} {
+    @include create-border($i, solid, rgba(#000, 0.5));
+  }
+
+  @each $positon in $positions {
+    .mo-border-#{$positon}-#{$i} {
+      border-#{$positon}: #{$i}px solid rgba(#000, 0.5);
+    }
+  }
+}
+
+.mo-radius {
+  border-radius: 100%;
+}
+
+.mo-radius-pill {
+  border-radius: 99px;
+}
+
+@for $i from 0 through 128 {
+  .mo-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
+
+  @each $positon in $positions {
+    @each $positon2 in $positions2 {
+      .mo-radius-#{$positon}-#{$positon2}-#{$i} {
+        border-#{$positon}-#{$positon2}-radius: #{$i}px;
+      }
+    }
+  }
+}
+
+@each $positon in $positions {
+  .mo-border-#{$positon}-none {
+    border-#{$positon}: none !important;
+  }
+
+  .mo-border-#{$positon}-0 {
+    border-#{$positon}: none !important;
+  }
+}

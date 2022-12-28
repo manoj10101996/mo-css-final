@@ -1,0 +1,255 @@
+<div id="card">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Card
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking cards to increase UI/UX experience of end user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    A card is a flexible and extensible content container. It includes options
+    for headers and footers, a wide variety of content, contextual background
+    colors, and powerful display options. cards replace our old panels, wells,
+    and thumbnails. Similar functionality to those components is available as
+    modifier classes for cards.
+  </div>
+</div>
+<!--  -->
+<div id="card-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic card layout with Card Header, Card Body, Card Footer
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-card border me-16" [style.display]="'inline-block'">
+        <div class="mo-card-header">
+          Mo Card Header
+        </div>
+        <div class="mo-card-body">
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been
+        </div>
+        <div class="mo-card-footer">
+          Mo Card Footer
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-invite" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Card - Invite - header - Card layout with Card Invite Header, Card Body,
+      Card Footer
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-card mo-card-invite-{{color}}-{{position}} me-16"
+        [style.display]="'inline-block'"
+      >
+        <div class="mo-card-header">
+          Mo Card Header
+        </div>
+        <div class="mo-card-body">
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been
+        </div>
+        <div class="mo-card-footer">
+          Mo Card Footer
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <span class="mo-hr-text">
+        Position
+      </span>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="top"
+          [(ngModel)]="position"
+          (change)="setTheme()"
+          [attr.id]="'mo-radio-top-' + color"
+        />
+        <label [attr.for]="'mo-radio-top-' + color">
+          Top
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="right"
+          [(ngModel)]="position"
+          (change)="setTheme()"
+          [attr.id]="'mo-radio-right-' + color"
+        />
+        <label [attr.for]="'mo-radio-right-' + color">
+          Right
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="bottom"
+          [(ngModel)]="position"
+          (change)="setTheme()"
+          [attr.id]="'mo-radio-bottom-' + color"
+        />
+        <label [attr.for]="'mo-radio-bottom-' + color">
+          Bottom
+        </label>
+      </div>
+      <div class="mo-radio mo-radio-checked-{{color}}">
+        <input
+          type="radio"
+          name="position"
+          value="left"
+          [(ngModel)]="position"
+          (change)="setTheme()"
+          [attr.id]="'mo-radio-left-' + color"
+        />
+        <label [attr.for]="'mo-radio-left-' + color">
+          Left
+        </label>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['invite']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-highlight" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Card - Highlight - header - Card layout with Card High-Light Header, Card
+      Body, Card Footer
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-card mo-card-header-{{color}}"
+        [style.display]="'inline-block'"
+      >
+        <div class="mo-card-header">
+          Mo Card Header
+        </div>
+        <div class="mo-card-body">
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been
+        </div>
+        <div class="mo-card-footer">
+          Mo Card Footer
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['high-light']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-square" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Card - Square - Card layout with Card Header, Card Body, Card Footer &
+      Squared Edges
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-card mo-card-squared" [style.display]="'inline-block'">
+        <div class="mo-card-header">
+          Mo Card Header
+        </div>
+        <div class="mo-card-body">
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries,
+        </div>
+        <div class="mo-card-footer">
+          Mo Card Footer
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['square']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-filled" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Card - Filled - Card layout with Card Header, Card Body, Card Footer With
+      Filled Theme
+    </div>
+    <div class="mo-card-header">
+      <div
+        class="mo-card mo-card-bg-{{color}}"
+        [style.display]="'inline-block'"
+      >
+        <div class="mo-card-header">
+          Mo Card Header
+        </div>
+        <div class="mo-card-body">
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been
+        </div>
+        <div class="mo-card-footer">
+          Mo Card Footer
+        </div>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>

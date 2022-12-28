@@ -1,0 +1,30 @@
+<div id="ratio">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Display
+  </div>
+  <div class="mo-text-2 pb-10">
+    The display CSS property sets whether an element is treated as a block or
+    inline element and the layout used for its children, such as flow layout,
+    grid or flex.
+  </div>
+</div>
+<div id="ratio-basic" class="mo-card">
+  <div class="mo-card-header">
+    Formally, the display property sets an element's inner and outer display
+    types. The outer type sets an element's participation in flow layout; the
+    inner type sets the layout of children. Some values of display are fully
+    defined in their own individual specifications; for example the detail of
+    what happens when display: flex is declared is defined in the CSS Flexible
+    Box Model specification.
+  </div>
+  <div class="mo-card-footer">
+    <ul class="mo-list mo-list-bordered mb-0">
+      <ng-template ngFor let-type [ngForOf]="displayTypes" let-i="index">
+        <li class="mo-list-{{type}}">
+          <b> {{type | titlecase}} </b>-
+          <span class="mo-text-i">.mo-d-{{type}}</span>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</div>

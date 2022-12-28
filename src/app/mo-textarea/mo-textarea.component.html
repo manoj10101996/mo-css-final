@@ -1,0 +1,218 @@
+<div id="dropdown">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Textarea
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Textarea to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    The &lt;textarea&gt; HTML element represents a multi-line plain-text editing
+    control, useful when you want to allow users to enter a sizeable amount of
+    free-form text, for example a comment on a review or feedback form.
+  </div>
+</div>
+
+<!--  -->
+<div id="textarea-basic" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">Basic Textarea</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea"
+          id="textarea"
+          placeholder="Textarea - basic"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['basic']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="textarea-scroll" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea - Scroll Text
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">TextArea Scroll Text</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea"
+          id="textarea"
+          placeholder="Textarea - basic"
+          rows="5"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </textarea>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['scroll']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="textarea-resize" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea - Resizeable
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">TextArea Resizeable</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea mo-textarea-resize"
+          placeholder="Textarea - basic"
+          id="textarea"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['resize']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="textarea-theme" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea - Filled Theme
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">TextArea Filled Theme</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea mo-textarea-bg-{{color}}"
+          placeholder="Textarea - {{color}}"
+          id="textarea"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <div class="theme-selection-grid">
+        <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+          <div
+            class="theme"
+            [style.background]="themes[theme].color"
+            [class.theme-active]="color === theme"
+            (click)="color = theme;this.setTheme();"
+          ></div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['theme']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="textarea-scrollbar" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea - Themed scrollbar
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">TextArea Themed scrollbar</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea mo-textarea-bg-{{color}} mo-textarea-scroll-{{color}}"
+          placeholder="Textarea - {{color}}"
+          id="textarea"
+          rows="5"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </textarea>
+      </div>
+    </div>
+    <div class="mo-card-body">
+      <div class="theme-selection-grid">
+        <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+          <div
+            class="theme"
+            [style.background]="themes[theme].color"
+            [class.theme-active]="color === theme"
+            (click)="color = theme;this.setTheme();"
+          ></div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['scrollbar']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="textarea-rounded" class="mt-16">
+  <div class="mo-card">
+    <div class="mo-card-header">
+      Basic Textarea - Rounded edges
+    </div>
+    <div class="mo-card-header">
+      <div class="mo-textarea-box">
+        <label for="textArea-basic">TextArea Rounded</label>
+        <textarea
+          name="textarea"
+          class="mo-textarea mo-textarea-rounded mo-textarea-bg-{{color}}"
+          placeholder="Textarea - Rounded"
+          id="textarea"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <div class="mo-card-footer">
+      <span class="mo-hr-text">
+        Code
+      </span>
+      <span class="mo-hr-text-right">
+        Copy
+      </span>
+      <pre><code [highlight]="codes['rounded']"></code></pre>
+    </div>
+  </div>
+</div>
+<!--  -->

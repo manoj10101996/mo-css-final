@@ -1,0 +1,23 @@
+<div class="mo-canvas p-12">
+  <div class="mo-canvas-body mo-scroll-light pl-16 pr-16">
+    <nav id="topTo">
+      <ol class="mo-breadcrumb m-0 pl-0">
+        <li
+          class="mo-breadcrumb-item"
+          routerLinkActive="mo-text-danger mo-text-b"
+          [routerLink]="'/home'"
+        >
+          <a>Home</a>
+        </li>
+        <li
+          class="mo-breadcrumb-item"
+          routerLinkActive="mo-text-danger mo-text-b"
+          [routerLink]="currentPath.path"
+        >
+          <a>{{currentPath.name}}</a>
+        </li>
+      </ol>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

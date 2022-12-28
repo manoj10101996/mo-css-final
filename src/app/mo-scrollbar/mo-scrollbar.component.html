@@ -1,0 +1,61 @@
+<div id="scrollbar">
+  <div class="mo-text-3 pb-10 mo-text-b">
+    Scroll Bar
+  </div>
+  <div class="mo-text-2 pb-10">
+    Easily create nice looking Scroll Bar to increase UI/UX experience of end
+    user.
+  </div>
+  <div class="mo-text-2 pb-10">
+    A vertical or horizontal bar commonly on the far right or bottom of a window
+    that lets you move the window viewing area up, down, left, or right. Most
+    people today are familiar with scroll bars because of the need to scroll up
+    and down on almost every Internet web page.
+  </div>
+</div>
+<ng-template ngFor let-mode [ngForOf]="scrollModes" let-i="index">
+  <div class="mo-card" [attr.id]="mode">
+    <div class="mo-card-header">
+      Scrollbar - {{mode}}
+    </div>
+    <div class="mo-card-body">
+      <div
+        class="mo-card mo-card-squared me-16"
+        [style.display]="'inline-block'"
+        style="width: 50%;"
+      >
+        <div class="mo-card-header">
+          {{color|titlecase}}
+        </div>
+        <div
+          class="mo-card-body mo-scroll-{{color}} mo-scroll-{{color}}-{{mode}}"
+          style="max-height: 7.5rem; overflow: auto;"
+        >
+          Mo-card - Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries, Mo-card - Lorem Ipsum is simply dummy text of
+          the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries,
+        </div>
+        <div class="mo-card-footer mo-text-b mo-text-i">
+          mo-scroll-{{color}} mo-scroll-{{color}}-{{mode}}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!--  -->
+<div class="theme-selection-grid theme-position">
+  <ng-template ngFor let-theme [ngForOf]="colors" let-i="index">
+    <div
+      class="theme"
+      [style.background]="themes[theme].color"
+      [class.theme-active]="color === theme"
+      (click)="color = theme;setTheme();"
+    ></div>
+  </ng-template>
+</div>
